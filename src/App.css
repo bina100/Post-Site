@@ -10,16 +10,7 @@
 body{
   background-color: #F0F0F0;
 }
-.section-1 {
-  width: 100%;
-  margin: 68px auto 0px auto;
-  background: #d7e3f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 68px;
-}
-.button-style {
-  padding: 0px 8px;
+
+.posts{
+  margin: 160px auto 8px auto;
 }

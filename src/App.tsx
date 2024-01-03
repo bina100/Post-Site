@@ -15,7 +15,6 @@ import {
   searchPosts,
 } from "./components/Action/Action";
 import TextCell from "./components/Atoms/TextCell/TextCell";
-import SearchBox from "./components/Molecules/SearchBox/SearchBox";
 
 function App() {
   const [isDelete, setIsDelete] = useState(false);
@@ -42,8 +41,6 @@ function App() {
   useEffect(() => {
     fetchPostData().then((res) => setPostsData(res));
   }, []);
-
-  const ADD_ICON = "/icons/add.svg";
 
   const handleAddPost = () => {
     console.log("hello add post");
@@ -91,7 +88,6 @@ function App() {
     handleClosePopUp();
   };
   const handleClosePopUp = () => {
-    console.log("close popup");
     setPostTitle("");
     setPostBody("");
     setIsDelete(false);
@@ -101,7 +97,6 @@ function App() {
     setIsOpenPopUp(false);
   };
   const handleCloseNotification = () => {
-    console.log("close notification");
     setIsOpenNotification(false);
   };
   const handleSearchPosts = (searchValue: string) => {
@@ -110,19 +105,10 @@ function App() {
 
   return (
     <>
-      <Header />
-      <div className="section-1">
-        <SearchBox onChangeSearchValue={handleSearchPosts} />
-        <div className="button-style">
-          <Button
-            text="הוספת פוסט"
-            $backgroundColor="rgba(155,194,253, 1)"
-            $color="#0453C8"
-            $iconSrc={ADD_ICON}
-            onClick={handleAddPost}
-          ></Button>
-        </div>
-      </div>
+      <Header
+        handleAddPost={handleAddPost}
+        handleSearchPosts={handleSearchPosts}
+      />
       <div className="posts">
         {postsData.map((post) => (
           <PostCard

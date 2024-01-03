@@ -11,8 +11,8 @@ export const PopupWrapper = styled.div<{
     position: relative;
     align-items: center;
     justify-content: center;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     color: ${(props) => props.$colorTextHeader ?? "#ECF2F9"};
     background-color: ${(props) => props.$backgroundHeader ?? "#666"};
   }

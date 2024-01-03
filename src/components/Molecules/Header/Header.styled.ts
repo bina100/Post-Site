@@ -35,4 +35,12 @@ export const HeaderWrapper = styled.div<{
       margin: 8px;
     }
   }
+  .sub-header {
+    width: 100%;
+    background: #d7e3f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+  }
 `;
