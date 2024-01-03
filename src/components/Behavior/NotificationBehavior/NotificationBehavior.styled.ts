@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const NotificationBehaviorWrapper = styled.div`
   width: 100%;
   align-self: center;
-  /* margin: auto; */
-  /* animation: fadeIn 500ms ease; */
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  animation: fadeIn 1s ease-in-out forwards;
 
   @keyframes fadeIn {
     0% {
