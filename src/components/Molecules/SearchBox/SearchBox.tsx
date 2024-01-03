@@ -15,7 +15,7 @@ const SearchBox: FC<SearchBoxProps> = ({
 
   useEffect(() => {
     onChangeSearchValue(searchValue);
-  }, [searchValue, onChangeSearchValue]);
+  }, [searchValue]);
 
   const changeSearchValue = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(() => e.target.value);

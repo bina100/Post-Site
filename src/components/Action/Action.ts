@@ -64,7 +64,7 @@ export const searchPosts = async (query: string) => {
 
     const filteredPosts = allPosts.filter(
       (post: { id: number; title: string; body: string }) =>
-        post.id.toString() === query ||
+        post.id.toString().includes(query) ||
         post.title.toLowerCase().includes(query.toLowerCase()) ||
         post.body.toLowerCase().includes(query.toLowerCase())
     );
